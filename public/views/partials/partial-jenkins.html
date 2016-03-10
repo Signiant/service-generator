@@ -1,0 +1,8 @@
+<div ng-if="help.hasError === false" class="jumbotron text-center">
+    <h2 >Creating Jenkins Job</h2>
+    <div class="fa fa-cog fa-spin fa-5x"></div>
+</div>
+<div ng-if="help.hasError">
+    <ng-include src="'views/components/component-help.html'"></ng-include>
+    <ng-include ng-controller="FormController" src="'views/components/component-form.html'"></ng-include>
+</div>

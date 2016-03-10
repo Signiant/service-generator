@@ -1,0 +1,13 @@
+<div class="form-container">
+    <div ng-if="help.hasError" class="alert alert-danger">
+        <div ng-bind-html="help.message"></div>
+
+        <br><a data-toggle="collapse" data-target="#errorMessage" aria-expanded="false" aria-controls="errorMessage">Hide/show full error message</a>
+        <div class="collapse collapsing-container" id="errorMessage">
+            <div class="alert alert-danger alert-container">{{ help.error }}</div>
+        </div>
+        <div ng-if="!help.hasError" class="alert alert-info">
+            <div ng-bind-html="help.message"></div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+# Modules and Packages #
+node_modules
+bower_components
+
+# Project Directories #
+dist
+generators
+
+# Auth / Keys #
+.auth.json
+
+# Other #
+.idea
+.DS_Store

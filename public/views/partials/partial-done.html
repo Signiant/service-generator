@@ -1,0 +1,7 @@
+<div class="jumbotron text-center">
+  <h1>All finished</h1>
+  <p>Your project is ready to go!<br>A github repo has been initialized, your project structure has been generated, and a jenkins job has been created
+    <br>Clone the repo to start making changes, or go ahead and run a test build</p>
+  <a href="{{ service.repo }}" class="btn btn-success">Repo</a>
+  <a ng-if="service.job" href="{{ service.job }}" class="btn btn-success">Job</a>
+</div>
