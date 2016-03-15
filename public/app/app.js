@@ -4,6 +4,10 @@ angular.module('serviceGenerator', ['btford.socket-io', 'schemaForm', 'ui.router
         return socketFactory();
 })
 
+.factory('QuestionService', function(){
+        return {questions: null}
+})
+
 .config(function($stateProvider, $urlRouterProvider){
     $urlRouterProvider.otherwise('/');
     $stateProvider.state(

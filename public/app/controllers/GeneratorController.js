@@ -1,7 +1,12 @@
-angular.module('serviceGenerator').controller('GeneratorController', ['$scope', '$state', function($scope, $state) {
+angular.module('serviceGenerator').controller('GeneratorController', ['$scope', '$state', 'QuestionService', function($scope, $state, QuestionService) {
 
-    $scope.$on('yo:question', function(event, questions){
-        $scope.$broadcast('form:question', questions);
+    $scope.$watch(function(){ return QuestionService.questions }, function(questions){
+        if(questions){
+            console.log('Questions');
+            $scope.$broadcast('form:question', questions);
+        }else{
+            console.log('None');
+        }
     });
 
     $scope.$on('form:answer', function(event, answers){
