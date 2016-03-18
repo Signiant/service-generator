@@ -22,10 +22,21 @@ angular.module('serviceGenerator').controller('GitController', ['$scope','$state
                 "validationMessage": {202: "Please enter a valid HTTP clone URL for your git repository"}
             },
             {
-                type: "submit",
-                title: "Submit"
+                type: "section",
+                htmlClass: "buttonGroup",
+                items: [
+                    {
+                        type: "submit",
+                        title: "Submit"
+                    },
+                    {
+                        type: "button",
+                        title: "Cancel",
+                        style: 'btn-danger',
+                        onClick: "$emit('cancel');"
+                    }
+                ]
             }
-
         ]
     };
 

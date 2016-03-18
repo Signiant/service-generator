@@ -31,8 +31,14 @@ angular.module('serviceGenerator').controller('JenkinsController', ['$scope', '$
     var otherForm = [
 
         {
-            "type": "actions",
+            "type": "section",
+            "htmlClass": "buttonGroup",
             "items": [
+                {
+                    "type": "submit",
+                    "style": "btn-danger",
+                    "title": "Retry"
+                },
                 {
                     "type": "button",
                     "style": "btn-warning",
@@ -40,9 +46,10 @@ angular.module('serviceGenerator').controller('JenkinsController', ['$scope', '$
                     "onClick": "$parent.jenkinsSkip()"
                 },
                 {
-                    "type": "submit",
+                    "type": "button",
                     "style": "btn-danger",
-                    "title": "Retry"
+                    "title": "Cancel",
+                    "onClick": "$emit('cancel');"
                 }
             ]
         }

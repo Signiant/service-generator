@@ -5,21 +5,42 @@ angular.module('serviceGenerator', ['btford.socket-io', 'schemaForm', 'ui.router
 })
 
 .factory('QuestionService', function(){
-        return {questions: null}
+        return {questions: null};
+})
+
+.factory('GeneratorList', function(){
+    return {
+        'schema': {
+            'service': {
+                'type': 'string',
+                'title': 'Service',
+                'enum': null,
+                'default': null
+            },
+            'projectName': {
+                'type': 'string',
+                'title': 'Project Name',
+                'required': true,
+                'pattern': '^[a-zA-Z0-9-]+$',
+                'x-schema-form': {
+                    'validationMessage': {202: 'Project name must consist only of letters, numbers, and dashes'}
+                }
+            }
+        }
+    };
 })
 
 .config(function($stateProvider, $urlRouterProvider){
     $urlRouterProvider.otherwise('/');
     $stateProvider.state(
-        /*'home',
+       'home',
         {
             url: '/',
             templateUrl: 'views/partials/partial-home.html'
         }
-    ).state(*/
+    ).state(
         'select',
         {
-            url: '/',
             templateUrl: 'views/partials/partial-select.html',
             controller:  'SelectController'
         }

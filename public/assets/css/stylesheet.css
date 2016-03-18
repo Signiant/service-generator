@@ -1,3 +1,8 @@
+*{
+    padding: 0px;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
 html{
     height: 100%
 }
@@ -5,29 +10,135 @@ body {
     height: 100%;
     padding: 0;
     margin: 0;
-}
-.collapsing-container {
-    padding: 0px;
-    margin: 0px;
+    background-color: #20AAE5;
 }
 
-.alert-container {
-    margin: 0px;
-}
-.form-container{
-    width: 50%;
-    margin: 25px auto;
-}
-.jumbotron{
-    border-radius: 0;
-}
 .view-container{
-    padding: 0px;
-}
-
-.header-container{
-    height: 10%;
+    position: relative;
+    min-height: 90%;
+    overflow-x : hidden;
+    padding: 25px 0;
     width: 100%;
-    border-radius: 0;
+}
+
+.content-wrapper{
+    width: 50%;
+    margin: 0 auto;
+}
+
+.form-header{
+    border-radius: 4px 4px 0 0;
+    background-color: #333333;
+    color: #fefefe;
+    padding: 25px
+}
+.form-content{
+    border-radius: 0px 0px 4px 4px;
+    background-color: #fefefe;
+    padding: 25px;
+    padding-bottom: 10px;
+}
+.buttonGroup div{
+    display: inline-block;
 
 }
+.buttonGroup input, .buttonGroup button{
+    margin-right: 15px;
+}
+
+.btn-start{
+    margin-top: 20px;
+}
+/* Button Styles */
+.btn, .btn:active, .btn:focus, .btn:target{
+    border: none;
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 1.4;
+    border-radius: 4px;
+    padding: 10px 15px
+}
+
+.btn:focus, .btn:active:focus, .btn.active:focus {
+    outline: 0 none;
+}
+
+/** Primary */
+.btn-primary, .btn-primary:active, .btn-primary:focus{
+    background-color: #20aae5;
+}
+.btn-primary:hover{
+    background-color: #76cbef
+}
+
+.btn-primary:active:focus{
+    background-color: #1375a0;
+
+}
+
+
+/* Navbar Styles */
+
+#main-nav{
+    margin-bottom: 0;
+}
+
+#main-nav.navbar-default .navbar-brand {
+    color: #FFFFFF
+}
+#main-nav.navbar-default {
+    font-size: 14px;
+    background-color: #333333;
+    border-width: 1px;
+    border-radius: 0px;
+    border-color:#333333;
+}
+#main-nav.navbar-default .navbar-nav>li>a {
+    color: rgba(189, 189, 189, 1);
+    background-color: #333333;
+}
+#main-nav.navbar-default .navbar-nav>li>a:hover,
+#main-nav.navbar-default .navbar-nav>li>a:focus {
+    color: rgba(254, 254, 254, 1);
+    background-color: #333333;
+}
+#main-nav.navbar-default .navbar-nav>.active>a,
+#main-nav.navbar-default .navbar-nav>.active>a:hover,
+#main-nav.navbar-default .navbar-nav>.active>a:focus {
+    color: rgba(189, 189, 189, 1);
+    background-color: rgba(28, 28, 28, 1);
+}
+#main-nav.navbar-default .navbar-toggle {
+    border-color: #1c1c1c;
+}
+#main-nav.navbar-default .navbar-toggle:hover,
+#main-nav.navbar-default .navbar-toggle:focus {
+    background-color: #1c1c1c;
+}
+#main-nav.navbar-default .navbar-toggle .icon-bar {
+    background-color: #1c1c1c;
+}
+#main-nav.navbar-default .navbar-toggle:hover .icon-bar,
+#main-nav.navbar-default .navbar-toggle:focus .icon-bar {
+    background-color: #333333;
+}
+
+/*
+.has-success .control-label,
+.has-success .help-block,
+.has-success .form-control-feedback,
+.has-success .form-control{
+    border-width: 2px;
+     border-color: #2ecc71;
+     color: #2ecc71;
+     box-shadow: none;
+ }
+.has-success .control-label,
+.has-success .help-block,
+.has-success .form-control-feedback,
+.has-success .form-control:focus{
+    border-color: #2ecc71;
+    color:#2ecc71;
+    box-shadow: none;
+    outline: 0;
+} */

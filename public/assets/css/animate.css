@@ -1,17 +1,10 @@
-.view-container{
-    position: relative;
-    min-height: 90%;
-    overflow-x : hidden;
-}
-
 [ui-view].ng-enter, [ui-view].ng-leave {
     position: absolute;
-
-    left: 0px;
+    left:0px;
     right: 0px;
     -webkit-transition: 1s all ease-in-out;
-    -moz-transition: 1s all ease-in-out;
-    transition:  1s  all ease-in-out;
+    -moz-transition: 1s all ease;
+    transition:  1s  all ease;
 }
 [ui-view].ng-enter {
     -webkit-animation:slideInRight 1s both ease-in-out;
@@ -25,15 +18,15 @@
     animation:slideOutLeft 1s both ease-in-out;
 }
 @keyframes slideOutLeft {
-    from    { transform: translateX(0); }
+
     to      { transform: translateX(-200%); }
 }
 @-moz-keyframes slideOutLeft {
-    from    { -moz-transform: translateX(0); }
+
     to      { -moz-transform: translateX(-200%); }
 }
 @-webkit-keyframes slideOutLeft {
-    from    { -webkit-transform: translateX(0); }
+
     to      { -webkit-transform: translateX(-200%); }
 }
 
@@ -50,4 +43,3 @@
     from    { -webkit-transform:translateX(200%); }
     to      { -webkit-transform: translateX(0); }
 }
-

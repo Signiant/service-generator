@@ -1,6 +1,5 @@
-angular.module('serviceGenerator').controller('SocketController', ['$scope', '$rootScope', '$state', 'socket', 'QuestionService',  function($scope, $rootScope, $state, socket, QuestionService) {
+angular.module('serviceGenerator').controller('SocketController', ['$scope', '$rootScope', '$state', 'socket', 'QuestionService', 'GeneratorList', function($scope, $rootScope, $state, socket, QuestionService, GeneratorList) {
 
-    questionInit(['service:question', 'yo:question']);
     responseInit(['yo:answer', 'yo:ready', 'service:answer', 'git:answer', 'jenkins:answer', 'jenkins:skip']);
     eventInit(['yo:success', 'git:success', 'git:error', 'jenkins:error']);
 
@@ -9,19 +8,30 @@ angular.module('serviceGenerator').controller('SocketController', ['$scope', '$r
        QuestionService.questions = null;
     });
 
+    $scope.$on('cancel', function() {
+        $scope.restart();
+    });
+
     socket.on('done', function(service) {
         $state.go('done');
         $scope.service = service;
     });
 
+    socket.on('service:list', function(list){
+        GeneratorList.schema.service.enum = list;
+        GeneratorList.schema.service.default = list[0];
+    });
 
-    function questionInit(eventNames){
-        eventNames.forEach(function(eventName){
-            socket.on(eventName, function(questions){
-                QuestionService.questions = questions;
-            })
-        }.bind(this));
-    }
+    socket.on('yo:question', function(questions){
+        QuestionService.questions = questions;
+    });
+
+    $scope.restart = function(){
+        console.log('Resetting generator');
+        socket.disconnect();
+        socket.connect();
+        $state.go('home');
+    };
 
     function eventInit(eventNames){
         eventNames.forEach(function(eventName){

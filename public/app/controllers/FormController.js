@@ -16,14 +16,25 @@ angular.module('serviceGenerator').controller('FormController', ['$scope', funct
             properties: questions.schema
         };
 
-        if(questions.form){
+        if("form" in questions){
             $scope.form = questions.form
         }else{
             $scope.form = [
                 "*",
-                {
-                    type: "submit",
-                    title: "Submit"
+                {   type: "section",
+                    htmlClass: "buttonGroup",
+                    "items": [
+                        {
+                            type: "submit",
+                            title: "Submit"
+                        },
+                        {
+                            type: "button",
+                            title: "Cancel",
+                            style: 'btn-danger',
+                            "onClick": "$emit('cancel');"
+                        }
+                    ]
                 }
             ]
         }

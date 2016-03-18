@@ -4,7 +4,7 @@ var server = require('http').Server(app);
 var io = require('socket.io')(server);
 var path = require('path');
 var cleanup = require('./lib/cleanup.js');
-var initSockets = require('./lib/yo-sockets.js');
+var initSockets = require('./lib/socket-handler.js');
 
 cleanup(path.join(__dirname, 'dist'), false);
 

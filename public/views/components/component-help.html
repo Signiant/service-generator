@@ -6,7 +6,7 @@
         <div class="collapse collapsing-container" id="errorMessage">
             <div class="alert alert-danger alert-container">{{ help.error }}</div>
         </div>
-        <div ng-if="!help.hasError" class="alert alert-info">
+        <div ng-if="help && !help.hasError" class="alert alert-info">
             <div ng-bind-html="help.message"></div>
         </div>
     </div>
