@@ -21,9 +21,15 @@ body {
     width: 100%;
 }
 
+.alert-container{
+    margin: 0;
+}
+
 .content-wrapper{
     width: 50%;
     margin: 0 auto;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+    border-radius: 4px;
 }
 
 .form-header{
@@ -32,16 +38,19 @@ body {
     color: #fefefe;
     padding: 25px
 }
+
 .form-content{
     border-radius: 0px 0px 4px 4px;
     background-color: #fefefe;
     padding: 25px;
     padding-bottom: 10px;
 }
+
 .buttonGroup div{
     display: inline-block;
-
+    margin-top: 15px;
 }
+
 .buttonGroup input, .buttonGroup button{
     margin-right: 15px;
 }
@@ -56,7 +65,7 @@ body {
     font-weight: normal;
     line-height: 1.4;
     border-radius: 4px;
-    padding: 10px 15px
+    padding: 12.5px 15px
 }
 
 .btn:focus, .btn:active:focus, .btn.active:focus {
@@ -68,17 +77,18 @@ body {
     background-color: #20aae5;
 }
 .btn-primary:hover{
-    background-color: #76cbef
+    background-color: #1586b7;
 }
 
 .btn-primary:active:focus{
-    background-color: #1375a0;
+    background-color: #0b435b;
 
 }
 
-
 /* Navbar Styles */
-
+.navbar, .jumbotron {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+}
 #main-nav{
     margin-bottom: 0;
 }
@@ -123,22 +133,59 @@ body {
     background-color: #333333;
 }
 
+.control-label{
+    font-weight: normal;
+    font-size: 15px;
+}
+
+.form-control-feedback{
+    margin-top: 1px;
+}
+
 /*
+.form-control{
+    height: 40px;
+}
+
+.control-label,
+.help-block,
+.form-control-feedback,
+.form-control{
+    border-width: 2px;
+    box-shadow: none;
+}
+
+
 .has-success .control-label,
 .has-success .help-block,
 .has-success .form-control-feedback,
 .has-success .form-control{
-    border-width: 2px;
-     border-color: #2ecc71;
-     color: #2ecc71;
+     border-width: 2px;
+     border-color: #3c763d;
      box-shadow: none;
  }
-.has-success .control-label,
-.has-success .help-block,
-.has-success .form-control-feedback,
+
 .has-success .form-control:focus{
-    border-color: #2ecc71;
-    color:#2ecc71;
-    box-shadow: none;
+    border-color: #3c763d;
     outline: 0;
-} */
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px #4d994e;
+}
+
+
+.has-error .control-label,
+.has-error .help-block,
+.has-error .form-control-feedback,
+.has-error .form-control{
+    border-width: 2px;
+    border-color: #912c21 ;
+    color: #912c21 ;
+    box-shadow: none;
+}
+
+.has-error .form-control:focus{
+    border-color: #912c21 ;
+    color:#912c21 ;
+    box-shadow: none;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px #c0392b;
+    outline: 0;
+}*/
