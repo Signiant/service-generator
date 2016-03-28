@@ -6,9 +6,6 @@ bower_components
 dist
 generators
 
-# Auth / Keys #
-.auth.json
-
 # Other #
 .idea
 .DS_Store
