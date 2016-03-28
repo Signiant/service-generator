@@ -18,8 +18,8 @@ angular.module('serviceGenerator').controller('SocketController', ['$scope', '$r
     });
 
     socket.on('service:list', function(list){
-        GeneratorList.schema.service.enum = list;
-        GeneratorList.schema.service.default = list[0];
+        GeneratorList.schema.service['x-schema-form'].titleMap = list;
+        GeneratorList.schema.service.default = Object.keys(list)[0];
     });
 
     socket.on('yo:question', function(questions){

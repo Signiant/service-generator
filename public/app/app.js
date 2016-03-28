@@ -14,8 +14,11 @@ angular.module('serviceGenerator', ['btford.socket-io', 'schemaForm', 'ui.router
             'service': {
                 'type': 'string',
                 'title': 'Service',
-                'enum': null,
-                'default': null
+                'default': null,
+                'x-schema-form': {
+                    'type': 'select',
+                    'titleMap': {}
+                }
             },
             'projectName': {
                 'type': 'string',
