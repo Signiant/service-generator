@@ -4,10 +4,8 @@ FROM node:argon
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
-#Setup git and credentials
+#Install git
 RUN apt-get install git
-RUN mkdir /usr/credentials
-RUN git config --global credential.helper 'store --file=/usr/credentials/.git-credentials'
 
 # Install app dependencies
 RUN npm install -g bower
