@@ -23,8 +23,26 @@ angular.module('serviceGenerator').controller('JenkinsController', ['$scope', '$
             "validationMessage": {202: "Jenkins job name must consist only of letters, numbers, and underscores"}
         },
         {
-            type: "submit",
-            title: "Submit"
+            type: "section",
+            htmlClass: "buttonGroup",
+            "items": [
+                {
+                    type: "submit",
+                    title: "Submit"
+                },
+                {
+                    "type": "button",
+                    "style": "btn-warning",
+                    "title": "Skip",
+                    "onClick": "$parent.jenkinsSkip()"
+                },
+                {
+                    "type": "button",
+                    "style": "btn-danger",
+                    "title": "Cancel",
+                    "onClick": "$emit('cancel');"
+                }
+            ]
         }
     ];
 
