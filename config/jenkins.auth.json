@@ -1,7 +1,5 @@
 {
-  "jenkins": {
-    "user": "< your jenkins user >",
+    "user": "<jenkins user>",
     "baseUrl": "jenkins.base.url.com:8080/",
-    "token": "< your jenkins token >"
-  }
+    "token": "<jenkins token>"
 }
