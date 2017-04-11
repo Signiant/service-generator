@@ -18,7 +18,7 @@ and
 bower install
 ```
 
-Once the dependencies are installed you will need to setup your jenkins credentials.  Modify the config/jenkins.auth.json file, replacing the values for user, baseUrl, and token with your own.  
+Once the dependencies are installed you will need to setup your jenkins and phabricator credentials.  Modify the config/auth.json file, replacing the values for user, baseUrl, and token with your own.  
 
 Git must also be set up on your machine and be configured with the proper credentials to push to the repositories you create for your service over http.
 

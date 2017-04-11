@@ -1,6 +1,6 @@
 {
   "name": "service-generator",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Signiant Service Generatorr",
   "main": "server.js",
   "author": "Jonathan Seed",

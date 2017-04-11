@@ -1,4 +1,4 @@
-angular.module('serviceGenerator').controller('SelectController', [ '$scope', '$state', 'QuestionService', 'GeneratorList', function($scope, $state, QuestionService, GeneratorList) {
+angular.module('serviceGenerator').controller('SelectController', [ '$scope', '$rootScope', '$state', 'QuestionService', 'GeneratorList', function($scope, $rootScope, $state, QuestionService, GeneratorList) {
 
     var unwatchQuestions = $scope.$watch(function(){ return QuestionService.questions }, function(questions){
         if(questions)
@@ -10,6 +10,7 @@ angular.module('serviceGenerator').controller('SelectController', [ '$scope', '$
     });
 
     $scope.$on('form:answer', function(event, answers){
+        $rootScope.projectName = answers.projectName;
         answers = JSON.stringify(answers);
         unwatchQuestions();
         unwatchGenerators();
