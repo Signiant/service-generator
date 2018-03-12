@@ -24,9 +24,9 @@ angular.module('serviceGenerator', ['btford.socket-io', 'schemaForm', 'ui.router
                 'type': 'string',
                 'title': 'Project Name',
                 'required': true,
-                'pattern': '^[a-zA-Z0-9-]+$',
+                'pattern': '^[a-zA-Z0-9- ]+$',
                 'x-schema-form': {
-                    'validationMessage': {202: 'Project name must consist only of letters, numbers, and dashes'}
+                    'validationMessage': {202: 'Project name must consist only of letters, numbers, dashes and spaces'}
                 }
             }
         }
